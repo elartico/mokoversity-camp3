@@ -1,7 +1,7 @@
 <html>
 <head>
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -53,27 +53,37 @@
   </div><!-- /.navbar-collapse -->
 </nav>
 
-<style>
-#main{
-  width : 640px;
-  height : 480px;
-  backgrounnd : url(./bg.jpg);
- 
-}
-</style>
+<div id="main"></div>
+<div id="scores"></div>
+
 <div class="row">
- <div class="col-md-12">
-<div id="main"><canvas id="game"></canvas></div>
+<div class="col-md-4">Hellow!</div>
+<div class="col-md-8">Cereza!</div>
+<div class="col-md-12">
 
- </div>
-</div>
-<script type="text/javascript" src="main.js" > </script>
-<body>
-  </html>
-
+<div>
 
   
 
 
 
   
+<div class="row">
+<div class="col-md-12">
+  <canvas id="game"></canvas> </div></div>
+<script type="text/javascript">var canvas=document.getElementById("game");
+var ctx=canvas.getContext("2d");
+var ballX=Math.floor(Math.random()*300);
+var ballY=Math.floor(Math.random()*500);
+var ballR=Math.floor(Math.random()*100);
+
+canvas.width=480;
+canvas.height=320;
+ctx.fillStyle='blue';
+ctx.beginPath();
+ctx.arc(95,50,40,0,Math.PI*2,true);
+ctx.fill();
+</script>
+
+</body>
+</html>
